@@ -3,83 +3,315 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Atendimento que Vende</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:#0f172a;
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(180deg,#080808,#121212,#1d1d1d);
+color:white;
+
+}
+
+.hero{
+
+padding:60px 25px;
 text-align:center;
+
 }
 
-.card{
-max-width:380px;
-padding:30px;
-background:#1e293b;
-border-radius:20px;
-box-shadow:0 0 20px rgba(0,0,0,.4);
-}
+.logo{
 
-img{
-width:120px;
+width:140px;
+height:140px;
 border-radius:50%;
-margin-bottom:20px;
+box-shadow:0 0 25px rgba(255,193,7,.35);
+
 }
 
 h1{
-margin:0;
-font-size:30px;
+
+margin-top:25px;
+font-size:38px;
+
 }
 
-p{
-color:#cbd5e1;
-margin:20px 0;
+.destaque{
+
+color:#d4af37;
+
+}
+
+.subtitulo{
+
+margin-top:18px;
+font-size:18px;
+color:#d6d6d6;
+line-height:30px;
+
 }
 
 .botao{
+
 display:inline-block;
-padding:16px 35px;
-background:#22c55e;
-color:white;
-text-decoration:none;
+margin-top:35px;
+padding:18px 45px;
+background:#d4af37;
+color:#000;
 font-weight:bold;
-border-radius:10px;
-font-size:18px;
+text-decoration:none;
+border-radius:50px;
+font-size:20px;
 transition:.3s;
+
 }
 
 .botao:hover{
-background:#16a34a;
-}
-</style>
 
-<script>
-window.onload=function(){
-window.location.href="https://t.me/Atendimentovendebot";
+transform:scale(1.05);
+
 }
-</script>
+
+section{
+
+max-width:900px;
+margin:auto;
+padding:60px 25px;
+
+}
+
+.titulo{
+
+font-size:32px;
+margin-bottom:35px;
+text-align:center;
+color:#d4af37;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+
+}
+
+.card{
+
+background:#1f1f1f;
+padding:25px;
+border-radius:18px;
+border:1px solid #303030;
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+}
+
+.card h3{
+
+margin-bottom:12px;
+color:#d4af37;
+
+}
+
+.card p{
+
+line-height:28px;
+color:#d0d0d0;
+
+}
+
+.cta{
+
+text-align:center;
+padding-bottom:80px;
+
+}
+
+.botao2{
+
+display:inline-block;
+padding:18px 45px;
+background:#25D366;
+color:white;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+border-radius:50px;
+margin-top:20px;
+
+}
+
+footer{
+
+padding:35px;
+text-align:center;
+color:#999;
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="card">
+<div class="hero">
 
-<h1>Atendimento que Vende</h1>
+<img src="logo.png" class="logo">
 
-<p>Você será direcionado automaticamente para o Telegram.</p>
+<h1>Atendimento <span class="destaque">que Vende</span></h1>
+
+<p class="subtitulo">
+
+Aprenda um método simples e prático para transformar seu atendimento em uma verdadeira máquina de vendas.
+
+</p>
 
 <a class="botao" href="https://t.me/Atendimentovendebot">
-Abrir Telegram
+
+🚀 QUERO COMEÇAR AGORA
+
 </a>
 
 </div>
+
+<section>
+
+<h2 class="titulo">
+
+O que você vai aprender
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🎯 Abordagem</h3>
+
+<p>Como conquistar o cliente nos primeiros segundos.</p>
+
+</div>
+
+<div class="card">
+
+<h3>💬 Scripts</h3>
+
+<p>Mensagens prontas para vender mais todos os dias.</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔥 Conversão</h3>
+
+<p>Aprenda técnicas que realmente aumentam as vendas.</p>
+
+</div>
+
+<div class="card">
+
+<h3>📈 Fechamento</h3>
+
+<p>Como transformar dúvidas em clientes.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">
+
+Você receberá
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>📘 PDFs</h3>
+
+<p>Material completo para consulta.</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎧 Audiobook</h3>
+
+<p>Aprenda ouvindo onde quiser.</p>
+
+</div>
+
+<div class="card">
+
+<h3>📲 Acesso imediato</h3>
+
+<p>Receba tudo diretamente pelo Telegram.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="cta">
+
+<h2 class="titulo">
+
+Comece hoje mesmo
+
+</h2>
+
+<p style="font-size:18px;color:#ccc;max-width:650px;margin:auto;line-height:30px;">
+
+Clique no botão abaixo para acessar o treinamento e transformar seu atendimento em resultados reais.
+
+</p>
+
+<a class="botao" href="https://t.me/Atendimentovendebot">
+
+🚀 ACESSAR O CURSO
+
+</a>
+
+<br>
+
+<a class="botao2" href="https://wa.me/5500000000000">
+
+💬 Falar com um especialista
+
+</a>
+
+</div>
+
+<footer>
+
+© 2026 Atendimento que Vende • Todos os direitos reservados.
+
+</footer>
 
 </body>
 </html>
