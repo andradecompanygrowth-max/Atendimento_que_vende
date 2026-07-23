@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Atendimento que Vende</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src='https://connect.facebook.net/en_US/fbevents.js';
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script');
+
+fbq('init','710948061260721');
+fbq('track','PageView');
+
+function clicarWhats(){
+fbq('track','Lead');
+fbq('trackCustom','WhatsAppClick');
+}
+</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -18,25 +48,27 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(180deg,#080808,#121212,#1d1d1d);
+background:#0f0f0f;
 color:white;
 }
 
 .hero{
 padding:60px 25px;
 text-align:center;
+background:linear-gradient(180deg,#080808,#151515);
 }
 
 .logo{
-width:140px;
-height:140px;
+width:150px;
+height:150px;
 border-radius:50%;
-box-shadow:0 0 25px rgba(255,193,7,.35);
+box-shadow:0 0 30px rgba(212,175,55,.35);
+margin-bottom:20px;
 }
 
 h1{
-margin-top:25px;
-font-size:38px;
+font-size:42px;
+margin-bottom:15px;
 }
 
 .destaque{
@@ -44,99 +76,106 @@ color:#d4af37;
 }
 
 .subtitulo{
-margin-top:18px;
+
+font-size:20px;
+line-height:34px;
+color:#d8d8d8;
+max-width:760px;
+margin:auto;
+
+}
+
+.preco{
+
+margin-top:35px;
+font-size:42px;
+font-weight:bold;
+color:#25D366;
+
+}
+
+.oferta{
+
+margin-top:10px;
 font-size:18px;
-color:#d6d6d6;
-line-height:30px;
-max-width:700px;
-margin-left:auto;
-margin-right:auto;
+color:#d4af37;
+
 }
 
 .botao{
+
 display:inline-block;
-margin-top:35px;
-padding:18px 45px;
+margin-top:40px;
+padding:20px 45px;
 background:#25D366;
 color:white;
+font-size:22px;
 font-weight:bold;
 text-decoration:none;
 border-radius:50px;
-font-size:20px;
 transition:.3s;
+
 }
 
 .botao:hover{
-transform:scale(1.05);
-}
 
-.botaoTelegram{
-display:inline-block;
-margin-top:20px;
-padding:18px 45px;
-background:#d4af37;
-color:#000;
-font-weight:bold;
-text-decoration:none;
-border-radius:50px;
-font-size:20px;
-transition:.3s;
-}
-
-.botaoTelegram:hover{
 transform:scale(1.05);
+
 }
 
 section{
-max-width:900px;
+
+max-width:1100px;
 margin:auto;
-padding:60px 25px;
+padding:70px 25px;
+
 }
 
 .titulo{
-font-size:32px;
-margin-bottom:35px;
+
+font-size:34px;
 text-align:center;
+margin-bottom:40px;
 color:#d4af37;
+
 }
 
 .cards{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
+
 }
 
 .card{
-background:#1f1f1f;
+
+background:#1d1d1d;
 padding:25px;
 border-radius:18px;
-border:1px solid #303030;
+border:1px solid #333;
 transition:.3s;
+
 }
 
 .card:hover{
+
 transform:translateY(-6px);
+
 }
 
 .card h3{
-margin-bottom:12px;
+
+margin-bottom:15px;
 color:#d4af37;
+
 }
 
 .card p{
+
 line-height:28px;
-color:#d0d0d0;
-}
+color:#d6d6d6;
 
-.cta{
-text-align:center;
-padding-bottom:80px;
-}
-
-footer{
-padding:35px;
-text-align:center;
-color:#999;
 }
 
 </style>
@@ -147,18 +186,38 @@ color:#999;
 
 <div class="hero">
 
-<img src="https://i.postimg.cc/YSwN4mhJ/d7caa9b5-1da7-4846-af6f-b698d5d1742a-20260720-214755-0000.png" class="logo" alt="Logo Atendimento que Vende">
+<img src="https://i.postimg.cc/YSwN4mhJ/d7caa9b5-1da7-4846-af6f-b698d5d1742a-20260720-214755-0000.png" class="logo">
 
-<h1>Atendimento <span class="destaque">que Vende</span></h1>
+<h1>
+Atendimento <span class="destaque">que Vende</span>
+</h1>
 
 <p class="subtitulo">
-Aprenda um mÃ©todo simples e prÃ¡tico para transformar seu atendimento em uma verdadeira mÃ¡quina de vendas.
-<br><br>
-Antes de acessar o curso, fale com um especialista para tirar suas dÃºvidas e receber todas as orientaÃ§Ãµes.
+
+O treinamento ideal para garçons, bartenders e profissionais de atendimento que desejam oferecer uma experiência de excelência, aumentar suas oportunidades e se destacar no mercado.
+
 </p>
 
-<a class="botao" href="https://wa.me/5554996788117?text=OlÃ¡!%20Tenho%20interesse%20no%20curso%20Atendimento%20que%20Vende.">
-ðŸ’¬ FALAR COM UM ESPECIALISTA
+<div class="preco">
+
+Apenas R$ 4,99
+
+</div>
+
+<p class="oferta">
+
+Oferta de lançamento • Pagamento único
+
+</p>
+
+<a
+class="botao"
+onclick="clicarWhats()"
+href="https://wa.me/5554996788117?text=Olá! Tenho interesse no curso Atendimento que Vende."
+>
+
+ GARANTIR MEU CURSO POR APENAS R$ 4,99
+
 </a>
 
 </div>
@@ -166,29 +225,59 @@ Antes de acessar o curso, fale com um especialista para tirar suas dÃºvidas e re
 <section>
 
 <h2 class="titulo">
-O que vocÃª vai aprender
+
+O que você vai aprender
+
 </h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>ðŸŽ¯ Abordagem</h3>
-<p>Como conquistar o cliente nos primeiros segundos.</p>
+
+<h3> Atendimento Profissional</h3>
+
+<p>
+
+Aprenda técnicas para oferecer um atendimento que encanta clientes e gera experiências memoráveis.
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>ðŸ’¬ Scripts</h3>
-<p>Mensagens prontas para vender mais todos os dias.</p>
+
+<h3> Técnicas para Garçons e Bartenders</h3>
+
+<p>
+
+Descubra boas práticas utilizadas pelos melhores profissionais de bares e restaurantes.
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>ðŸ”¥ ConversÃ£o</h3>
-<p>TÃ©cnicas para aumentar suas vendas e fechar mais negÃ³cios.</p>
+
+<h3> Fidelização de Clientes</h3>
+
+<p>
+
+Saiba como conquistar clientes para que eles retornem ao estabelecimento e indiquem seu atendimento.
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>ðŸ“ˆ Fechamento</h3>
-<p>Transforme dÃºvidas em clientes e aumente seus resultados.</p>
+
+<h3> Atendimento que gera resultados</h3>
+
+<p>
+
+Melhore sua comunicação, aumente a satisfação dos clientes e desenvolva habilidades valorizadas no mercado.
+
+</p>
+
 </div>
 
 </div>
@@ -198,61 +287,251 @@ O que vocÃª vai aprender
 <section>
 
 <h2 class="titulo">
-O que vocÃª recebe
+
+O que você recebe
+
 </h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>ðŸ“˜ PDFs</h3>
-<p>Material completo para consulta.</p>
+
+<h3> Manual Completo em PDF</h3>
+
+<p>
+
+Aprenda técnicas de atendimento profissional, postura, abordagem e boas práticas para oferecer uma experiência diferenciada aos clientes.
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>ðŸŽ§ Audiobook</h3>
-<p>Aprenda ouvindo onde quiser.</p>
+
+<h3> 6 Capítulos em Audiobook</h3>
+
+<p>
+
+Estude onde e quando quiser. Ouça o conteúdo durante o trabalho, deslocamento ou momentos livres.
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>ðŸ“² Acesso pelo Telegram</h3>
-<p>Receba o conteÃºdo completo apÃ³s a confirmaÃ§Ã£o.</p>
+
+<h3> Ficha Técnica dos Drinks Mais Vendidos do Mundo</h3>
+
+<p>
+
+Tenha acesso às receitas, ingredientes e modo de preparo dos drinks mais pedidos em bares e restaurantes.
+
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<div class="cta">
+<section>
 
 <h2 class="titulo">
-Pronto para vender mais?
+
+Para quem é este curso?
+
 </h2>
 
-<p style="font-size:18px;color:#ccc;max-width:650px;margin:auto;line-height:30px;">
-Clique no botÃ£o abaixo para conversar com um especialista e receber todas as informaÃ§Ãµes sobre o treinamento.
+<div class="cards">
+
+<div class="card">
+
+<h3> Garçons</h3>
+
+<p>
+
+Para profissionais que desejam oferecer um atendimento de excelência.
+
 </p>
-
-<a class="botao" href="https://wa.me/5554996788117?text=OlÃ¡!%20Tenho%20interesse%20no%20curso%20Atendimento%20que%20Vende.">
-ðŸ’¬ FALAR COM UM ESPECIALISTA
-</a>
-
-<br><br><br>
-
-<p style="color:#bbb;font-size:17px;">
-JÃ¡ possui acesso ao treinamento?
-</p>
-
-<a class="botaoTelegram" href="https://t.me/Atendimentovendebot">
-ðŸš€ ACESSAR O CURSO NO TELEGRAM
-</a>
 
 </div>
+
+<div class="card">
+
+<h3> Bartenders</h3>
+
+<p>
+
+Aprenda boas práticas para impressionar clientes e aumentar sua valorização profissional.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Atendentes</h3>
+
+<p>
+
+Ideal para quem trabalha com atendimento ao público em qualquer segmento.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Quem deseja evoluir</h3>
+
+<p>
+
+Mesmo sem experiência, você aprenderá técnicas simples e práticas para melhorar seu atendimento.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">
+
+Perguntas Frequentes
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3> Como recebo o curso?</h3>
+
+<p>
+
+Após a confirmação do pagamento você receberá o acesso imediatamente.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> O pagamento é único?</h3>
+
+<p>
+
+Sim. Você paga apenas R$ 4,99 uma única vez.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Quanto tempo tenho acesso?</h3>
+
+<p>
+
+O acesso é liberado para que você possa consultar o material sempre que precisar.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3> Preciso ter experiência?</h3>
+
+<p>
+
+Não. O treinamento foi desenvolvido tanto para iniciantes quanto para profissionais experientes.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section style="text-align:center;">
+
+<h2 class="titulo">
+
+Comece hoje mesmo!
+
+</h2>
+
+<p style="font-size:20px;line-height:34px;color:#d7d7d7;max-width:800px;margin:auto;">
+
+Invista apenas <strong style="color:#25D366;">R$ 4,99</strong> e tenha acesso ao Manual Completo em PDF, aos 6 capítulos em Audiobook e à Ficha Técnica dos Drinks Mais Vendidos do Mundo.
+
+</p>
+
+<a
+class="botao"
+onclick="clicarWhats()"
+href="https://wa.me/5554996788117?text=Olá!%20Tenho%20interesse%20no%20curso%20Atendimento%20que%20Vende."
+>
+
+ GARANTIR MEU CURSO POR APENAS R$ 4,99
+
+</a>
+
+</section>
+
+<a
+
+href="https://wa.me/5554996788117?text=Olá!%20Tenho%20interesse%20no%20curso%20Atendimento%20que%20Vende."
+
+onclick="clicarWhats()"
+
+style="
+
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 0 20px rgba(37,211,102,.45);
+z-index:999;
+
+"
+
+>
+
+
+
+</a>
 
 <footer>
 
-Â© 2026 Atendimento que Vende â€¢ Todos os direitos reservados.
+<p>
+
+© 2026 Atendimento que Vende
+
+</p>
+
+<p style="margin-top:8px;">
+
+Desenvolvido por <strong>Andrade Company Growth</strong>
+
+</p>
 
 </footer>
 
 </body>
+
 </html>
